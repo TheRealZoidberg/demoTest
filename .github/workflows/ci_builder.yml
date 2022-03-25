@@ -1,4 +1,4 @@
-name: Build and deploy notebooks
+name: Deploy_HTML
 
 #  Only run this when the master branch changes
 on:
