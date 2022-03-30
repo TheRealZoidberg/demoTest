@@ -4,5 +4,5 @@
 format: jb-book
 root: intro
 chapters:
-- file: markdown
-- file: notebooks
+- file: notebooks/hello-universe/CNN_for_Classifying_TESS_Flares.ipynb
+- file: notebooks/hello-universe/CNN_for_Classifying_Galaxy_Mergers.ipynb
