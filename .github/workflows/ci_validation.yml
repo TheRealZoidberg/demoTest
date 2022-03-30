@@ -35,6 +35,9 @@ jobs:
         pip install nbconvert
         pip install -I jinja2==3.0.3
         
+    - name: Cache
+      uses: actions/cache@v3.0.1
+      
     - name: Gather changed notebooks
       id: changed-files
       uses: tj-actions/changed-files@v18.4
