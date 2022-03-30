@@ -32,8 +32,7 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-['nb_epoch = 20', 'batch_size = 128', 'shuffle = True', '', '# Train']
-...
-['                    batch_size=batch_size,', '                    epochs=nb_epoch,', '                    validation_data=(X_valid, y_valid),                ', '                    shuffle=shuffle,', '                    verbose=True)']
+file_url = 'https://archive.stsci.edu/hlsps/deepmerge/hlsp_deepmerge_hst-jwst_acs-wfc3-nircam_illustris-z2_f814w-f160w-f356w_v1_sim-'+version+'.fits'
+hdu = fits.open(download_file(file_url, cache=True, show_progress=True))
 -------------------
 
