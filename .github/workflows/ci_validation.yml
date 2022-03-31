@@ -63,13 +63,13 @@ jobs:
             bandit $file
         done
           
-    - name: Validating with NBVAL
-      run: |
-        for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
-          echo "$file was updated, validating notebook"
-          run: | 
-            pytest --nbval $file
-        done
+    #- name: Validating with NBVAL
+    #  run: |
+    #    for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+    #      echo "$file was updated, validating notebook"
+    #      run: | 
+    #        pytest --nbval $file
+    #    done
         
     - name: Executing changed notebooks
       run: |
