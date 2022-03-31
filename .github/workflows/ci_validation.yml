@@ -20,7 +20,7 @@ jobs:
       id: cuda-toolkit
       with:
         cuda: '11.5.1'
-        run: nvcc -V
+
     
     - uses: actions/checkout@v2
     - name: Set up Python 3.8.12
