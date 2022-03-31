@@ -15,6 +15,13 @@ jobs:
       max-parallel: 5
 
     steps:
+    - uses: Jimver/cuda-toolkit@v0.2.5
+    - name: Install CUDA
+      id: cuda-toolkit
+      with:
+        cuda: '11.5.1'
+        run: nvcc -V
+    
     - uses: actions/checkout@v2
     - name: Set up Python 3.8.12
       uses: actions/setup-python@v2 ## needed for caching
