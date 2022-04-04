@@ -47,7 +47,7 @@ jobs:
         pip install bandit
         pip install nbconvert
         pip install -I jinja2==3.0.3
-        apt install nvidia-cuda-toolkit
+        sudo apt install nvidia-cuda-toolkit
       
     - name: Gather changed notebooks
       id: changed-files
