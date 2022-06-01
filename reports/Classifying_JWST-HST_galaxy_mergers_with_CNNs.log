@@ -20,54 +20,48 @@ nbclient.exceptions.CellExecutionError: An error occurred while executing the fo
 # arrays
 import numpy as np
 
-# set random seed for reproducibility 
-np.random.seed(42)
-
 # fits
 from astropy.io import fits
 from astropy.utils.data import download_file
+from astropy.visualization import simple_norm
 
 # plotting
-import matplotlib.pyplot as plt
-from matplotlib import ticker
-
-# stella CNN functions
-import stella
+from matplotlib import pyplot as plt
 
 # keras
-from keras.models import Sequential, Model, load_model
+from keras.models import Sequential, Model
 from keras.layers import Input, Flatten, Dense, Activation, Dropout, BatchNormalization
-from keras.layers.convolutional import Convolution1D, MaxPooling1D
+from keras.layers.convolutional import Convolution2D, MaxPooling2D
+from keras.regularizers import l2
+from keras.callbacks import EarlyStopping
 
-# sklearn for performance metrics
+# sklearn (for machine learning)
+from sklearn.model_selection import train_test_split
 from sklearn import metrics
 
-# lightkurve
-from lightkurve.search import search_lightcurve
+# from IPython import get_ipython
+# get_ipython().run_line_magic('matplotlib', 'notebook')
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mTypeError[0m                                 Traceback (most recent call last)
-Input [0;32mIn [1][0m, in [0;36m<cell line: 16>[0;34m()[0m
-[1;32m     13[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmatplotlib[39;00m [38;5;28;01mimport[39;00m ticker
-[1;32m     15[0m [38;5;66;03m# stella CNN functions[39;00m
-[0;32m---> 16[0m [38;5;28;01mimport[39;00m [38;5;21;01mstella[39;00m
-[1;32m     18[0m [38;5;66;03m# keras[39;00m
-[1;32m     19[0m [38;5;28;01mfrom[39;00m [38;5;21;01mkeras[39;00m[38;5;21;01m.[39;00m[38;5;21;01mmodels[39;00m [38;5;28;01mimport[39;00m Sequential, Model, load_model
+Input [0;32mIn [1][0m, in [0;36m<cell line: 13>[0;34m()[0m
+[1;32m     10[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmatplotlib[39;00m [38;5;28;01mimport[39;00m pyplot [38;5;28;01mas[39;00m plt
+[1;32m     12[0m [38;5;66;03m# keras[39;00m
+[0;32m---> 13[0m [38;5;28;01mfrom[39;00m [38;5;21;01mkeras[39;00m[38;5;21;01m.[39;00m[38;5;21;01mmodels[39;00m [38;5;28;01mimport[39;00m Sequential, Model
+[1;32m     14[0m [38;5;28;01mfrom[39;00m [38;5;21;01mkeras[39;00m[38;5;21;01m.[39;00m[38;5;21;01mlayers[39;00m [38;5;28;01mimport[39;00m Input, Flatten, Dense, Activation, Dropout, BatchNormalization
+[1;32m     15[0m [38;5;28;01mfrom[39;00m [38;5;21;01mkeras[39;00m[38;5;21;01m.[39;00m[38;5;21;01mlayers[39;00m[38;5;21;01m.[39;00m[38;5;21;01mconvolutional[39;00m [38;5;28;01mimport[39;00m Convolution2D, MaxPooling2D
 
-File [0;32m/usr/share/miniconda/lib/python3.9/site-packages/stella/__init__.py:5[0m, in [0;36m<module>[0;34m[0m
-[1;32m      2[0m PACKAGEDIR [38;5;241m=[39m os[38;5;241m.[39mpath[38;5;241m.[39mabspath(os[38;5;241m.[39mpath[38;5;241m.[39mdirname([38;5;18m__file__[39m))
-[1;32m      4[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mversion[39;00m [38;5;28;01mimport[39;00m __version__
-[0;32m----> 5[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mneural_network[39;00m            [38;5;28;01mimport[39;00m [38;5;241m*[39m
-[1;32m      6[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mpreprocessing_flares[39;00m      [38;5;28;01mimport[39;00m [38;5;241m*[39m
-[1;32m      7[0m [38;5;66;03m#from .preprocessing_transits    import *[39;00m
-
-File [0;32m/usr/share/miniconda/lib/python3.9/site-packages/stella/neural_network.py:4[0m, in [0;36m<module>[0;34m[0m
-[1;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnp[39;00m
-[1;32m      3[0m [38;5;28;01mfrom[39;00m [38;5;21;01mtqdm[39;00m [38;5;28;01mimport[39;00m tqdm
-[0;32m----> 4[0m [38;5;28;01mimport[39;00m [38;5;21;01mtensorflow[39;00m [38;5;28;01mas[39;00m [38;5;21;01mtf[39;00m
-[1;32m      5[0m [38;5;28;01mfrom[39;00m [38;5;21;01mtensorflow[39;00m [38;5;28;01mimport[39;00m keras
-[1;32m      6[0m [38;5;28;01mfrom[39;00m [38;5;21;01mscipy[39;00m[38;5;21;01m.[39;00m[38;5;21;01minterpolate[39;00m [38;5;28;01mimport[39;00m interp1d
+File [0;32m/usr/share/miniconda/lib/python3.9/site-packages/keras/__init__.py:21[0m, in [0;36m<module>[0;34m[0m
+[1;32m     15[0m [38;5;124;03m"""Implementation of the Keras API, the high-level API of TensorFlow.[39;00m
+[1;32m     16[0m 
+[1;32m     17[0m [38;5;124;03mDetailed documentation and user guides are available at[39;00m
+[1;32m     18[0m [38;5;124;03m[keras.io](https://keras.io).[39;00m
+[1;32m     19[0m [38;5;124;03m"""[39;00m
+[1;32m     20[0m [38;5;66;03m# pylint: disable=unused-import[39;00m
+[0;32m---> 21[0m [38;5;28;01mfrom[39;00m [38;5;21;01mtensorflow[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpython[39;00m [38;5;28;01mimport[39;00m tf2
+[1;32m     22[0m [38;5;28;01mfrom[39;00m [38;5;21;01mkeras[39;00m [38;5;28;01mimport[39;00m distribute
+[1;32m     24[0m [38;5;66;03m# See b/110718070#comment18 for more details about this import.[39;00m
 
 File [0;32m/usr/share/miniconda/lib/python3.9/site-packages/tensorflow/__init__.py:37[0m, in [0;36m<module>[0;34m[0m
 [1;32m     34[0m [38;5;28;01mimport[39;00m [38;5;21;01msys[39;00m [38;5;28;01mas[39;00m [38;5;21;01m_sys[39;00m

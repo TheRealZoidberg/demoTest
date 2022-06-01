@@ -20,8 +20,8 @@ nbclient.exceptions.CellExecutionError: An error occurred while executing the fo
 # arrays
 import numpy as np
 
-# set random seed for reproducibility 
-np.random.seed(42)
+# unpacking files
+import tarfile
 
 # fits
 from astropy.io import fits
@@ -44,6 +44,13 @@ from sklearn import metrics
 
 # lightkurve
 from lightkurve.search import search_lightcurve
+
+# from IPython import get_ipython
+# get_ipython().run_line_magic('matplotlib', 'notebook')
+
+# set random seed for reproducibility 
+np.random.seed(42)
+
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m

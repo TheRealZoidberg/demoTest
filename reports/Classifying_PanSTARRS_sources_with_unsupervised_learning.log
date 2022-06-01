@@ -32,8 +32,8 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-['nb_epoch = 20', 'batch_size = 128', 'shuffle = True', '', '# Train']
-...
-['                    batch_size=batch_size,', '                    epochs=nb_epoch,', '                    validation_data=(X_valid, y_valid),                ', '                    shuffle=shuffle,', '                    verbose=True)']
+%%time
+idx = np.random.choice(sample.shape[0], 10000)
+tsne_sample = TSNE(n_components=2, init='pca', perplexity=10, learning_rate = 10).fit_transform(sample[idx])
 -------------------
 

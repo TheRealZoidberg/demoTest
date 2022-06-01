@@ -54,7 +54,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="prev" title="STScI Notebook Repository Template" href="../../intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -98,9 +97,9 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="CNN_for_Classifying_TESS_Flares.html">
    Classifying flaring stars with stella: a convolutional neural network for TESS
   </a>
  </li>
@@ -145,7 +144,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/notebooks/hello-universe/CNN_for_Classifying_TESS_Flares.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/notebooks/hello-universe/Classifying_TESS_flares_with_CNNs.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -165,7 +164,7 @@ const thebe_selector_output = ".output, .cell_output"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/TheRealZoidberg/demoTest/issues/new?title=Issue%20on%20page%20%2Fnotebooks/hello-universe/CNN_for_Classifying_TESS_Flares.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/TheRealZoidberg/demoTest/issues/new?title=Issue%20on%20page%20%2Fnotebooks/hello-universe/Classifying_TESS_flares_with_CNNs.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -180,6 +179,23 @@ const thebe_selector_output = ".output, .cell_output"
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/TheRealZoidberg/demoTest/master?urlpath=tree/docs/notebooks/hello-universe/Classifying_TESS_flares_with_CNNs.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
 
         </div>
 
@@ -223,7 +239,12 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#build-a-cnn-in-keras">
-     3. Build a CNN in Keras
+     3. Build a CNN in
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       Keras
+      </span>
+     </code>
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -244,8 +265,8 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#faqs">
-   FAQs
+  <a class="reference internal nav-link" href="#faq">
+   FAQ
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -259,6 +280,11 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   FAQ
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#about-this-notebook">
@@ -322,7 +348,12 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#build-a-cnn-in-keras">
-     3. Build a CNN in Keras
+     3. Build a CNN in
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       Keras
+      </span>
+     </code>
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -343,8 +374,8 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#faqs">
-   FAQs
+  <a class="reference internal nav-link" href="#faq">
+   FAQ
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -358,6 +389,11 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   FAQ
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#about-this-notebook">
@@ -378,48 +414,57 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="classifying-flaring-stars-with-stella-a-convolutional-neural-network-for-tess">
+  <p><a id="top"></a></p>
+<div class="tex2jax_ignore mathjax_ignore section" id="classifying-flaring-stars-with-stella-a-convolutional-neural-network-for-tess">
 <h1>Classifying flaring stars with stella: a convolutional neural network for TESS<a class="headerlink" href="#classifying-flaring-stars-with-stella-a-convolutional-neural-network-for-tess" title="Permalink to this headline">¶</a></h1>
 <hr class="docutils" />
 <div class="section" id="learning-goals">
 <h2>Learning Goals<a class="headerlink" href="#learning-goals" title="Permalink to this headline">¶</a></h2>
-<p><strong>In this tutorial, you will see an example of building, compiling, and training a CNN to classify astronomical data in vector form.</strong>  By the end of this tutorial you will have a working example of a simple Convolutional Neural Network (CNN) in Keras.</p>
+<p><strong>In this tutorial, you will see an example of building, compiling, and training a CNN to classify astronomical data in vector form.</strong>
+By the end of this tutorial you will have a working example of a simple Convolutional Neural Network (CNN) in <code class="docutils literal notranslate"><span class="pre">Keras</span></code>.</p>
 </div>
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<p>CNNs are a class of  machine learning (ML) algorithms that can extract information from data. In this notebook, you will walk through the basic steps of applying a CNN to data:</p>
+<p>CNNs are a class of machine learning (ML) algorithms that can extract information from data. In this notebook, you will walk through the basic steps of applying a CNN to data:</p>
 <ol class="simple">
-<li><p>Load the data and visualize a sample of the data</p></li>
+<li><p>Load the data and visualize a sample of the data.</p></li>
 <li><p>Divide the data into training, validation, and testing sets.</p></li>
-<li><p>Build a CNN in Keras</p></li>
-<li><p>Compile the CNN</p></li>
-<li><p>Train the CNN to perform a classification task</p></li>
+<li><p>Build a CNN in <code class="docutils literal notranslate"><span class="pre">Keras</span></code>.</p></li>
+<li><p>Compile the CNN.</p></li>
+<li><p>Train the CNN to perform a classification task.</p></li>
 <li><p>Evaluate the CNN performance on test data with a confusion matrix.</p></li>
 <li><p>Build a new, unlabeled dataset and apply the CNN.</p></li>
 </ol>
-<p>CNNs can be applied to a  wide range of vector analysis tasks, including classification and regression.  Here, we will build, compile, and train CNN to classify whether a star has undergone a flaring event from its observed TESS light curve, and where the flaring events are located within the time series. This work is based on the model described in <a href='https://ui.adsabs.harvard.edu/abs/2020AJ....160..219F/abstract'>Feinstein et al. 2020</a> and presented in the <a href='https://ui.adsabs.harvard.edu/abs/2020JOSS....5.2347F/abstract'><code class="docutils literal notranslate"><span class="pre">stella</span></code></a> software package.</p>
-<p><strong>NOTE:</strong> <em>The <a class="reference external" href="https://adina.feinste.in/stella/"><code class="docutils literal notranslate"><span class="pre">stella</span></code> team has publicly-available code and documentation</a> for demonstrating the architecture and optimal performace of this model, which we encourage you to check out! The goal of this notebook is to step through the model building and training process.</em></p>
+<p>CNNs can be applied to a wide range of vector analysis tasks, including classification and regression.
+Here, we will build, compile, and train CNN to classify whether a star has undergone a flaring event from its observed TESS 2-minute light curve, and where the flaring events are located within the time series.
+This work is based on the model described in the <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2020JOSS....5.2347F/abstract"><code class="docutils literal notranslate"><span class="pre">stella</span></code></a> software package.</p>
+<p><strong>NOTE:</strong> <em>The <a class="reference external" href="https://adina.feinste.in/stella/"><code class="docutils literal notranslate"><span class="pre">stella</span></code> team has publicly-available code and documentation</a> for demonstrating the architecture and optimal performance of this model, which we encourage you to check out!
+The goal of this notebook is to step through the model building and training process.</em></p>
 </div>
 <div class="section" id="imports">
 <h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h2>
 <p>This notebook uses the following:</p>
 <ul class="simple">
-<li><p><em>numpy</em> to handle array functions</p></li>
-<li><p><em><a class="reference external" href="http://astropy.io">astropy.io</a> fits</em> for accessing FITS files</p></li>
-<li><p><em>matplotlib.pyplot</em> for plotting data</p></li>
-<li><p><em>stella</em> for generating the training set and processing data</p></li>
-<li><p><em>keras</em> for building the CNN</p></li>
-<li><p><em>sklearn</em> for model performance metrics</p></li>
-<li><p><em>lightkurve.search</em> for extracting light curves</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code> to handle array functions</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tarfile</span></code> for unpacking files</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">astropy</span></code> for accessing FITS files</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code> for plotting data</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stella</span></code> for generating the training set and processing data</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keras</span></code> for building the CNN</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sklearn</span></code> for model performance metrics</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lightkurve.search</span></code> for extracting light curves</p></li>
 </ul>
+<p>If you do not have these packages installed, you can install them using <code class="docutils literal notranslate"><span class="pre">pip</span></code> or <code class="docutils literal notranslate"><span class="pre">conda</span></code>.
+You can refer to the webpages for each of those modules for further installation instructions.</p>
 <p>To download the <code class="docutils literal notranslate"><span class="pre">stella</span></code> package, see their <a class="reference external" href="https://adina.feinste.in/stella/getting_started/installation.html">documentation</a>.</p>
+<p>To download the <code class="docutils literal notranslate"><span class="pre">lightkurve</span></code> package, see their <a class="reference external" href="https://docs.lightkurve.org/about/install.html">documentation</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># arrays</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="c1"># set random seed for reproducibility </span>
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<span class="c1"># unpacking files</span>
+<span class="kn">import</span> <span class="nn">tarfile</span>
 
 <span class="c1"># fits</span>
 <span class="kn">from</span> <span class="nn">astropy.io</span> <span class="kn">import</span> <span class="n">fits</span>
@@ -442,12 +487,18 @@ const thebe_selector_output = ".output, .cell_output"
 
 <span class="c1"># lightkurve</span>
 <span class="kn">from</span> <span class="nn">lightkurve.search</span> <span class="kn">import</span> <span class="n">search_lightcurve</span>
+
+<span class="c1"># from IPython import get_ipython</span>
+<span class="c1"># get_ipython().run_line_magic(&#39;matplotlib&#39;, &#39;notebook&#39;)</span>
+
+<span class="c1"># set random seed for reproducibility </span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2022-06-01 18:23:52.895218: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library &#39;libcudart.so.11.0&#39;; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.8.12/x64/lib
-2022-06-01 18:23:52.895251: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2022-06-01 18:25:05.369103: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library &#39;libcudart.so.11.0&#39;; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.8.12/x64/lib
+2022-06-01 18:25:05.369132: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
 </pre></div>
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
@@ -613,27 +664,33 @@ const thebe_selector_output = ".output, .cell_output"
 <h2>Convolutional Neural Network (CNN)  for Vector Classification<a class="headerlink" href="#convolutional-neural-network-cnn-for-vector-classification" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="download-the-training-data-using-stella">
 <h3>1. Download the training data using <code class="docutils literal notranslate"><span class="pre">stella</span></code><a class="headerlink" href="#download-the-training-data-using-stella" title="Permalink to this headline">¶</a></h3>
-<p>Load the sample of  TESS lightcurves (input vectors) and flare classifications (output labels) to be used to train the CNN from the <a href='https://ui.adsabs.harvard.edu/abs/2020JOSS....5.2347F/abstract'><code class="docutils literal notranslate"><span class="pre">stella</span></code></a>. package.  <code class="docutils literal notranslate"><span class="pre">stella</span></code> pre-processes the light curves and splits the data into training, test and validation sets.</p>
-<p>The training set contains stars observed at 2-minute cadence in TESS Sectors 1 and 2, classified by hand and presented as a flare catalog by <a href='https://ui.adsabs.harvard.edu/abs/2020AJ....159...60G/abstract'>Gunther et al. 2020</a>. The light curves are processed into snippets of length 200 cadences, where each flaring event, if present, is located at the center of the snippet. The full sample of lightcurves contains 8694 positive classes (flare), and 35896 negative classes (no flare). For this notebook, we will download a subset of this sample. These data are described in  <a href='https://ui.adsabs.harvard.edu/abs/2020AJ....160..219F/abstract'>Feinstein et al. 2020</a>.</p>
-<p>The CNN will be used to predict the presence of flaring events as a function of observing cadence. The input to the CNN is a light curve (time, flux, and flux error) and the output is a “probability light curve”, or probabilities (value between 0 and 1)  that the measurement at each cadence is of a flaring event (1=flare, 0=no flare). In other words, the CNN performs a <strong>classification</strong> task at each cadence. Before a probability light curve can be produced, <code class="docutils literal notranslate"><span class="pre">stella</span></code> first pre-processes the input light curve by assembling it into snippets of length 200 cadences to the model, so that it can predict a value for the flare probability at each valid candence.</p>
+<p>Load the sample of TESS lightcurves (input vectors) and flare classifications (output labels) to be used to train the CNN from the <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2020JOSS....5.2347F/abstract"><code class="docutils literal notranslate"><span class="pre">stella</span></code></a> package.
+<code class="docutils literal notranslate"><span class="pre">stella</span></code> pre-processes the light curves and splits the data into training, test and validation sets.</p>
+<p>The training set contains stars observed at 2-minute cadence in TESS Sectors 1 and 2, classified by hand and presented as a flare catalog by <a href='https://ui.adsabs.harvard.edu/abs/2020AJ....159...60G/abstract'>Gunther et al. 2020</a>.
+The light curves are processed into examples of length 200 cadences, where each flaring event, if present, is located at the center of the example. The full sample of lightcurves contains 8694 positive classes (flare), and 35896 negative classes (no flare).
+For this notebook, we will download a subset of this sample.
+These data are described in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2020AJ....160..219F/abstract">Feinstein et al. 2020</a>.</p>
+<p>The CNN will be used to predict the presence of flaring events as a function of observing cadence.
+The input to the CNN is a light curve (time, flux, and flux error) and the output is a “probability light curve”, or probabilities (value between 0 and 1) that the measurement at each cadence is of a flaring event (1=flare, 0=no flare).
+In other words, the CNN performs a <strong>classification</strong> task at each cadence.
+Before a probability light curve can be produced, <code class="docutils literal notranslate"><span class="pre">stella</span></code> first pre-processes the input light curve by assembling it into examples of length 200 cadences, so that the model can predict a value for the flare probability at each valid cadence.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># set data directory</span>
-<span class="n">data_dir</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="n">file_url</span> <span class="o">=</span> <span class="s1">&#39;https://archive.stsci.edu/hlsps/hellouniverse/hellouniverse_stella_500.tar.gz&#39;</span>
 
-<span class="c1"># download flare catalog</span>
-<span class="n">download</span> <span class="o">=</span> <span class="n">stella</span><span class="o">.</span><span class="n">DownloadSets</span><span class="p">(</span><span class="n">fn_dir</span><span class="o">=</span><span class="n">data_dir</span><span class="p">)</span>
-<span class="n">download</span><span class="o">.</span><span class="n">download_catalog</span><span class="p">()</span>
-<span class="c1"># download light curve files</span>
-<span class="n">download</span><span class="o">.</span><span class="n">flare_table</span> <span class="o">=</span> <span class="n">download</span><span class="o">.</span><span class="n">flare_table</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">500</span><span class="p">]</span>
-<span class="n">download</span><span class="o">.</span><span class="n">download_lightcurves</span><span class="p">(</span><span class="n">remove_fits</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="c1"># open file</span>
+<span class="n">file</span> <span class="o">=</span> <span class="n">tarfile</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">download_file</span><span class="p">(</span><span class="n">file_url</span><span class="p">,</span> <span class="n">cache</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+  
+<span class="c1"># extracting file</span>
+<span class="n">file</span><span class="o">.</span><span class="n">extractall</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+<span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: UnitsWarning: Unit &#39;Rsun&#39; not supported by the VOUnit standard.  [astropy.units.format.vounit]
-WARNING: UnitsWarning: Unit &#39;Rsun&#39; not supported by the VOUnit standard.  [astropy.units.format.vounit]
- 94%|████████████████████████████████████████▌  | 50/53 [02:44&lt;00:14,  4.82s/it]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 189 ms, sys: 51.1 ms, total: 240 ms
+Wall time: 248 ms
 </pre></div>
 </div>
 </div>
@@ -641,13 +698,35 @@ WARNING: UnitsWarning: Unit &#39;Rsun&#39; not supported by the VOUnit standard.
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># build train, test, validation dataset, &quot;ds&quot;</span>
+<span class="n">data_dir</span> <span class="o">=</span> <span class="s1">&#39;./hellouniverse_stella_500/&#39;</span>
+
 <span class="n">ds</span> <span class="o">=</span> <span class="n">stella</span><span class="o">.</span><span class="n">FlareDataSet</span><span class="p">(</span><span class="n">fn_dir</span><span class="o">=</span><span class="n">data_dir</span><span class="p">,</span>
-                         <span class="n">catalog</span><span class="o">=</span><span class="s1">&#39;Guenther_2020_flare_catalog.txt&#39;</span><span class="p">)</span>
+                         <span class="n">catalog</span><span class="o">=</span><span class="n">data_dir</span><span class="o">+</span><span class="s1">&#39;Guenther_2020_flare_catalog.txt&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reading in training set files.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████████████████████████████████████| 62/62 [00:00&lt;00:00, 149.48it/s]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>502 positive classes (flare)
+1342 negative classes (no flare)
+37.0% class imbalance
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">stella</span></code> dataset includes training, test and validation lightcurves (input vectors) and flare labels (output labels). <code class="docutils literal notranslate"><span class="pre">stella</span></code> applies the necessary pre-processing to the lightcurves for input to the CNN model. For more on how these are constructed, see the <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2020AJ....160..219F/abstract">Feinstein et al. 2020</a>. For our purpose (i.e., building the <code class="docutils literal notranslate"><span class="pre">stella</span></code> CNN from scratch to illustrate its structure and function), we first need to remove all lightcurves from the training, test and validation sets with NaN-valued inputs. To do this, we loop through the data and select only lightcurves without NaNs.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">stella</span></code> dataset includes training, test and validation lightcurves (input vectors) and flare labels (output labels).
+<code class="docutils literal notranslate"><span class="pre">stella</span></code> applies the necessary pre-processing to the lightcurves for input to the CNN model.
+For more on how these are constructed, see <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2020AJ....160..219F/abstract">Feinstein et al. 2020</a>.
+For our purposes (i.e., building the <code class="docutils literal notranslate"><span class="pre">stella</span></code> CNN from scratch to illustrate its structure and function), we first need to remove all lightcurves from the training, test and validation sets with NaN-valued inputs.
+To do this, we loop through the data and select only lightcurves without NaNs.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># remove lightcurves with NaNs from training, test and validation data</span>
@@ -656,9 +735,10 @@ WARNING: UnitsWarning: Unit &#39;Rsun&#39; not supported by the VOUnit standard.
 
     <span class="n">idx</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">input_data</span><span class="p">)[</span><span class="mi">0</span><span class="p">]):</span>
-        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">input_data</span><span class="p">[</span><span class="n">k</span><span class="p">,:,:][</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">input_data</span><span class="p">[</span><span class="n">k</span><span class="p">,:,:])])</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">input_data</span><span class="p">[</span><span class="n">k</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:][</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">input_data</span><span class="p">[</span><span class="n">k</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:])])</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="n">idx</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">idx</span>
+
 
 <span class="c1"># find indices in train, test and validation sets without NaNs</span>
 <span class="n">idx_train</span> <span class="o">=</span> <span class="n">remove_nans</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">train_data</span><span class="p">)</span>
@@ -681,7 +761,7 @@ WARNING: UnitsWarning: Unit &#39;Rsun&#39; not supported by the VOUnit standard.
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># select random image indices:</span>
-<span class="n">example_ids</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">train_labels</span><span class="p">),</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">example_ids</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">train_labels</span><span class="p">),</span> <span class="mi">16</span><span class="p">)</span>
 
 <span class="c1"># pull the lightcurves and labels for these selections</span>
 <span class="n">example_lightcurves</span> <span class="o">=</span> <span class="p">[</span><span class="n">ds</span><span class="o">.</span><span class="n">train_data</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">example_ids</span><span class="p">]</span>
@@ -689,17 +769,15 @@ WARNING: UnitsWarning: Unit &#39;Rsun&#39; not supported by the VOUnit standard.
 
 
 <span class="c1"># initialize your figure</span>
-<span class="n">fig1</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 
 <span class="c1"># loop through the randomly selected images and plot with labels</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;k&#39;</span><span class="p">}</span>
+<span class="n">titles</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;Flare&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;Non-flare&#39;</span><span class="p">}</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">example_ids</span><span class="p">)):</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">example_labels</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span> <span class="c1">#Flares</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">example_lightcurves</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Flare&#39;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span> <span class="c1"># Non-flares</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">example_lightcurves</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="s1">&#39;k&#39;</span><span class="p">)</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Non-flare&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">example_lightcurves</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">example_labels</span><span class="p">[</span><span class="n">i</span><span class="p">]])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">titles</span><span class="p">[</span><span class="n">example_labels</span><span class="p">[</span><span class="n">i</span><span class="p">]])</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Cadences&#39;</span><span class="p">)</span>
     
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
@@ -707,12 +785,16 @@ WARNING: UnitsWarning: Unit &#39;Rsun&#39; not supported by the VOUnit standard.
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../../_images/Classifying_TESS_flares_with_CNNs_13_0.png" src="../../_images/Classifying_TESS_flares_with_CNNs_13_0.png" />
+</div>
 </div>
 </div>
 <div class="section" id="build-a-cnn-in-keras">
-<h3>3. Build a CNN in Keras<a class="headerlink" href="#build-a-cnn-in-keras" title="Permalink to this headline">¶</a></h3>
+<h3>3. Build a CNN in <code class="docutils literal notranslate"><span class="pre">Keras</span></code><a class="headerlink" href="#build-a-cnn-in-keras" title="Permalink to this headline">¶</a></h3>
 <p>Here, we will build the CNN model described in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2020AJ....160..219F/abstract">Feinstein et al. 2020</a> and implemented in <code class="docutils literal notranslate"><span class="pre">stella</span></code> from scratch.</p>
-<p>Further details about Conv1D, MaxPooling1D, BatchNormalization, Dropout, and Dense layers can be found in the <a class="reference external" href="https://keras.io/api/layers/">Keras Layers Documentation</a>.  Further details about the sigmoid and softmax activation function can be found in the <a class="reference external" href="https://keras.io/api/layers/activations/">Keras Activation Function Documentation</a>.</p>
+<p>Further details about Conv1D, MaxPooling1D, BatchNormalization, Dropout, and Dense layers can be found in the <a class="reference external" href="https://keras.io/api/layers/">Keras Layers Documentation</a>.
+Further details about the sigmoid and softmax activation function can be found in the <a class="reference external" href="https://keras.io/api/layers/activations/">Keras Activation Function Documentation</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ------------------------------------------------------------------------------</span>
@@ -725,7 +807,7 @@ WARNING: UnitsWarning: Unit &#39;Rsun&#39; not supported by the VOUnit standard.
 
 <span class="n">filter1</span> <span class="o">=</span> <span class="mi">16</span>
 <span class="n">filter2</span> <span class="o">=</span> <span class="mi">64</span>
-<span class="n">dense</span>   <span class="o">=</span> <span class="mi">32</span>
+<span class="n">dense</span> <span class="o">=</span> <span class="mi">32</span>
 <span class="n">dropout</span> <span class="o">=</span> <span class="mf">0.1</span>
 
 <span class="c1"># Define architecture for model</span>
@@ -747,7 +829,13 @@ WARNING: UnitsWarning: Unit &#39;Rsun&#39; not supported by the VOUnit standard.
 <span class="n">d2</span> <span class="o">=</span> <span class="n">Dropout</span><span class="p">(</span><span class="n">dropout</span><span class="p">)(</span><span class="n">z0</span><span class="p">)</span>
 <span class="n">y_out</span> <span class="o">=</span> <span class="n">Dense</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;sigmoid&#39;</span><span class="p">)(</span><span class="n">d2</span><span class="p">)</span>
 
-<span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="n">inputs</span><span class="o">=</span><span class="n">x_in</span><span class="p">,</span> <span class="n">outputs</span><span class="o">=</span><span class="n">y_out</span><span class="p">)</span>
+<span class="n">cnn</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="n">inputs</span><span class="o">=</span><span class="n">x_in</span><span class="p">,</span> <span class="n">outputs</span><span class="o">=</span><span class="n">y_out</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2022-05-26 16:40:21.121026: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
 </pre></div>
 </div>
 </div>
@@ -755,16 +843,54 @@ WARNING: UnitsWarning: Unit &#39;Rsun&#39; not supported by the VOUnit standard.
 </div>
 <div class="section" id="compile-the-cnn">
 <h3>4. Compile the CNN<a class="headerlink" href="#compile-the-cnn" title="Permalink to this headline">¶</a></h3>
-<p>Next, we compile the model.  As in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2020AJ....160..219F/abstract">Feinstein et al. 2020</a>, we select the Adam opmimizer and the binary cross entropy loss function (as this is a binary classification problem).</p>
-<p>You can learn more about <a class="reference external" href="https://keras.io/api/optimizers/">optimizers</a> and more about <a class="reference external" href="https://keras.io/api/losses/">loss functions for regression tasks</a> in the <a class="reference external" href="https://keras.io/">Keras documentation</a></p>
+<p>Next, we compile the model.
+As in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2020AJ....160..219F/abstract">Feinstein et al. 2020</a>, we select the Adam optimizer and the binary cross entropy loss function (as this is a binary classification problem).</p>
+<p>You can learn more about <a class="reference external" href="https://keras.io/api/optimizers/">optimizers</a> and more about <a class="reference external" href="https://keras.io/api/losses/">loss functions for regression tasks</a> in the <a class="reference external" href="https://keras.io/">Keras documentation</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compile Model</span>
 <span class="n">optimizer</span> <span class="o">=</span> <span class="s1">&#39;adam&#39;</span>
 <span class="n">fit_metrics</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">]</span> 
 <span class="n">loss</span> <span class="o">=</span> <span class="s1">&#39;binary_crossentropy&#39;</span>
-<span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="n">loss</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="n">optimizer</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="n">fit_metrics</span><span class="p">)</span>
-<span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+<span class="n">cnn</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="n">loss</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="n">optimizer</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="n">fit_metrics</span><span class="p">)</span>
+<span class="n">cnn</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model: &quot;model&quot;
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 200, 1)]          0         
+                                                                 
+ conv1d (Conv1D)             (None, 200, 7)            119       
+                                                                 
+ max_pooling1d (MaxPooling1D  (None, 100, 7)           0         
+ )                                                               
+                                                                 
+ dropout (Dropout)           (None, 100, 7)            0         
+                                                                 
+ conv1d_1 (Conv1D)           (None, 100, 3)            1347      
+                                                                 
+ max_pooling1d_1 (MaxPooling  (None, 50, 3)            0         
+ 1D)                                                             
+                                                                 
+ dropout_1 (Dropout)         (None, 50, 3)             0         
+                                                                 
+ flatten (Flatten)           (None, 150)               0         
+                                                                 
+ dense (Dense)               (None, 32)                4832      
+                                                                 
+ dropout_2 (Dropout)         (None, 32)                0         
+                                                                 
+ dense_1 (Dense)             (None, 1)                 33        
+                                                                 
+=================================================================
+Total params: 6,331
+Trainable params: 6,331
+Non-trainable params: 0
+_________________________________________________________________
 </pre></div>
 </div>
 </div>
@@ -772,8 +898,9 @@ WARNING: UnitsWarning: Unit &#39;Rsun&#39; not supported by the VOUnit standard.
 </div>
 <div class="section" id="train-the-cnn-to-perform-a-classification-task">
 <h3>5. Train the CNN to perform a classification task<a class="headerlink" href="#train-the-cnn-to-perform-a-classification-task" title="Permalink to this headline">¶</a></h3>
-<p>We will start with training for 20 epochs, but this almost certainly won’t be long enough to get great results.  Once you’ve run your model and evaluated the fit, you can come back here and run the next cell again for 100 epochs or longer.</p>
-<p>You can learn more about <code class="docutils literal notranslate"><span class="pre">fit</span></code> <a class="reference external" href="https://keras.rstudio.com/reference/fit.html">here</a></p>
+<p>We will start with training for 20 epochs, but this almost certainly won’t be long enough to get great results.
+Once you’ve run your model and evaluated the fit, you can come back here and run the next cell again for 100 epochs or longer.</p>
+<p>You can learn more about <code class="docutils literal notranslate"><span class="pre">fit</span></code> <a class="reference external" href="https://keras.rstudio.com/reference/fit.html">here</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nb_epoch</span> <span class="o">=</span> <span class="mi">20</span>
@@ -781,12 +908,56 @@ WARNING: UnitsWarning: Unit &#39;Rsun&#39; not supported by the VOUnit standard.
 <span class="n">shuffle</span> <span class="o">=</span> <span class="kc">True</span>
 
 <span class="c1"># Train</span>
-<span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">train_data</span><span class="p">,</span> <span class="n">ds</span><span class="o">.</span><span class="n">train_labels</span><span class="p">,</span>
-                    <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span>
-                    <span class="n">epochs</span><span class="o">=</span><span class="n">nb_epoch</span><span class="p">,</span> 
-                    <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">val_data</span><span class="p">,</span> <span class="n">ds</span><span class="o">.</span><span class="n">val_labels</span><span class="p">),</span> 
-                    <span class="n">shuffle</span><span class="o">=</span><span class="n">shuffle</span><span class="p">,</span>
-                    <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">history</span> <span class="o">=</span> <span class="n">cnn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">train_data</span><span class="p">,</span> <span class="n">ds</span><span class="o">.</span><span class="n">train_labels</span><span class="p">,</span>
+                  <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span> 
+                  <span class="n">epochs</span><span class="o">=</span><span class="n">nb_epoch</span><span class="p">,</span> 
+                  <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">val_data</span><span class="p">,</span> <span class="n">ds</span><span class="o">.</span><span class="n">val_labels</span><span class="p">),</span> 
+                  <span class="n">shuffle</span><span class="o">=</span><span class="n">shuffle</span><span class="p">,</span>
+                  <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch 1/20
+23/23 [==============================] - 2s 30ms/step - loss: 0.6453 - accuracy: 0.6667 - val_loss: 0.6290 - val_accuracy: 0.7088
+Epoch 2/20
+23/23 [==============================] - 0s 17ms/step - loss: 0.5924 - accuracy: 0.7309 - val_loss: 0.6019 - val_accuracy: 0.7088
+Epoch 3/20
+23/23 [==============================] - 0s 14ms/step - loss: 0.5875 - accuracy: 0.7336 - val_loss: 0.6010 - val_accuracy: 0.7088
+Epoch 4/20
+23/23 [==============================] - 0s 15ms/step - loss: 0.5868 - accuracy: 0.7322 - val_loss: 0.5999 - val_accuracy: 0.7088
+Epoch 5/20
+23/23 [==============================] - 0s 19ms/step - loss: 0.5821 - accuracy: 0.7343 - val_loss: 0.5995 - val_accuracy: 0.7088
+Epoch 6/20
+23/23 [==============================] - 0s 16ms/step - loss: 0.5782 - accuracy: 0.7343 - val_loss: 0.6032 - val_accuracy: 0.7088
+Epoch 7/20
+23/23 [==============================] - 0s 15ms/step - loss: 0.5773 - accuracy: 0.7391 - val_loss: 0.5955 - val_accuracy: 0.7143
+Epoch 8/20
+23/23 [==============================] - 0s 15ms/step - loss: 0.5738 - accuracy: 0.7377 - val_loss: 0.5983 - val_accuracy: 0.7143
+Epoch 9/20
+23/23 [==============================] - 0s 14ms/step - loss: 0.5718 - accuracy: 0.7398 - val_loss: 0.5983 - val_accuracy: 0.7143
+Epoch 10/20
+23/23 [==============================] - 0s 16ms/step - loss: 0.5608 - accuracy: 0.7445 - val_loss: 0.5916 - val_accuracy: 0.7143
+Epoch 11/20
+23/23 [==============================] - 0s 15ms/step - loss: 0.5584 - accuracy: 0.7459 - val_loss: 0.5853 - val_accuracy: 0.7143
+Epoch 12/20
+23/23 [==============================] - 0s 13ms/step - loss: 0.5495 - accuracy: 0.7493 - val_loss: 0.5760 - val_accuracy: 0.7198
+Epoch 13/20
+23/23 [==============================] - 0s 14ms/step - loss: 0.5604 - accuracy: 0.7507 - val_loss: 0.5850 - val_accuracy: 0.7143
+Epoch 14/20
+23/23 [==============================] - 0s 14ms/step - loss: 0.5584 - accuracy: 0.7527 - val_loss: 0.5765 - val_accuracy: 0.7198
+Epoch 15/20
+23/23 [==============================] - 0s 14ms/step - loss: 0.5546 - accuracy: 0.7541 - val_loss: 0.5718 - val_accuracy: 0.7253
+Epoch 16/20
+23/23 [==============================] - 0s 14ms/step - loss: 0.5540 - accuracy: 0.7527 - val_loss: 0.5710 - val_accuracy: 0.7253
+Epoch 17/20
+23/23 [==============================] - 0s 14ms/step - loss: 0.5450 - accuracy: 0.7568 - val_loss: 0.5825 - val_accuracy: 0.7198
+Epoch 18/20
+23/23 [==============================] - 0s 15ms/step - loss: 0.5390 - accuracy: 0.7575 - val_loss: 0.5623 - val_accuracy: 0.7308
+Epoch 19/20
+23/23 [==============================] - 0s 15ms/step - loss: 0.5341 - accuracy: 0.7582 - val_loss: 0.5605 - val_accuracy: 0.7308
+Epoch 20/20
+23/23 [==============================] - 0s 15ms/step - loss: 0.5351 - accuracy: 0.7630 - val_loss: 0.5552 - val_accuracy: 0.7308
 </pre></div>
 </div>
 </div>
@@ -794,8 +965,8 @@ WARNING: UnitsWarning: Unit &#39;Rsun&#39; not supported by the VOUnit standard.
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># save the model to file</span>
-<span class="n">model_file</span> <span class="o">=</span> <span class="s1">&#39;flare_model.h5&#39;</span>
-<span class="n">model</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">model_file</span><span class="p">)</span>
+<span class="n">cnn_file</span> <span class="o">=</span> <span class="s1">&#39;flare_model.h5&#39;</span>
+<span class="n">cnn</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">cnn_file</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -803,36 +974,38 @@ WARNING: UnitsWarning: Unit &#39;Rsun&#39; not supported by the VOUnit standard.
 </div>
 <div class="section" id="test-the-cnn-performance">
 <h3>6. Test the CNN performance<a class="headerlink" href="#test-the-cnn-performance" title="Permalink to this headline">¶</a></h3>
-<p>Apply the CNN to predict flares on the “test” set, not used for training or validating the CNN, and evaluate the performance using a confusion matrix. See the documentation from <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html">sklearn on confusion matrices</a> for more information. The code for generating and plotting the confusion matrix below was adapted from the application by <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2020A%26C....3200390C/abstract">Ciprijanovic et al. 2020</a> for <a class="reference external" href="https://github.com/deepskies/deepmerge-public">DeepMerge</a>.</p>
+<p>Apply the CNN to predict flares on the “test” set, not used for training or validating the CNN, and evaluate the performance using a confusion matrix.
+See the documentation from <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html">sklearn on confusion matrices</a> for more information.
+The code for generating and plotting the confusion matrix below was adapted from the application by <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2020A%26C....3200390C/abstract">Ciprijanovic et al. 2020</a> for <a class="reference external" href="https://github.com/deepskies/deepmerge-public">DeepMerge</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plot_confusion_matrix</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">input_data</span><span class="p">,</span> <span class="n">input_labels</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plot_confusion_matrix</span><span class="p">(</span><span class="n">cnn</span><span class="p">,</span> <span class="n">input_data</span><span class="p">,</span> <span class="n">input_labels</span><span class="p">):</span>
     
     <span class="c1"># Compute flare predictions for the test dataset</span>
-    <span class="n">predictions</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">input_data</span><span class="p">)</span>
+    <span class="n">predictions</span> <span class="o">=</span> <span class="n">cnn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">input_data</span><span class="p">)</span>
 
     <span class="c1"># Convert to binary classification </span>
-    <span class="n">predictions</span> <span class="o">=</span>  <span class="p">(</span><span class="n">predictions</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;int32&#39;</span><span class="p">)</span> 
+    <span class="n">predictions</span> <span class="o">=</span> <span class="p">(</span><span class="n">predictions</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;int32&#39;</span><span class="p">)</span> 
     
     <span class="c1"># Compute the confusion matrix by comparing the test labels (ds.test_labels) with the test predictions</span>
-    <span class="n">cm</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">input_labels</span><span class="p">,</span> <span class="n">predictions</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">cm</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">input_labels</span><span class="p">,</span> <span class="n">predictions</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
     <span class="n">cm</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float&#39;</span><span class="p">)</span>
 
     <span class="c1"># Normalize the confusion matrix results. </span>
     <span class="n">cm_norm</span> <span class="o">=</span> <span class="n">cm</span> <span class="o">/</span> <span class="n">cm</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span>
     
-    <span class="c1">#plotting</span>
+    <span class="c1"># Plotting</span>
     <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
     <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
 
-    <span class="n">cax</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><span class="n">cm_norm</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">matshow</span><span class="p">(</span><span class="n">cm_norm</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;binary_r&#39;</span><span class="p">)</span>
 
-    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Confusion matrix (Pristine Images)&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.08</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Confusion matrix&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.08</span><span class="p">)</span>
     
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">([</span><span class="s1">&#39;Flare&#39;</span><span class="p">,</span> <span class="s1">&#39;No Flare&#39;</span><span class="p">])</span>
     
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">([</span><span class="s1">&#39;Flare&#39;</span><span class="p">,</span> <span class="s1">&#39;No Flare&#39;</span><span class="p">])</span>
 
     <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Predicted&#39;</span><span class="p">)</span>
@@ -842,9 +1015,8 @@ WARNING: UnitsWarning: Unit &#39;Rsun&#39; not supported by the VOUnit standard.
     <span class="n">thresh</span> <span class="o">=</span> <span class="n">cm_norm</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">/</span> <span class="mf">2.</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cm_norm</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cm_norm</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
-            <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="nb">format</span><span class="p">(</span><span class="n">cm_norm</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">],</span> <span class="n">fmt</span><span class="p">),</span>
-            <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
-            <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span> <span class="k">if</span> <span class="n">cm_norm</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">thresh</span> <span class="k">else</span> <span class="s2">&quot;black&quot;</span><span class="p">)</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="nb">format</span><span class="p">(</span><span class="n">cm_norm</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">],</span> <span class="n">fmt</span><span class="p">),</span> 
+                    <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span> <span class="k">if</span> <span class="n">cm_norm</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">thresh</span> <span class="k">else</span> <span class="s2">&quot;black&quot;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -852,17 +1024,22 @@ WARNING: UnitsWarning: Unit &#39;Rsun&#39; not supported by the VOUnit standard.
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_confusion_matrix</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">ds</span><span class="o">.</span><span class="n">test_data</span><span class="p">,</span> <span class="n">ds</span><span class="o">.</span><span class="n">test_labels</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_confusion_matrix</span><span class="p">(</span><span class="n">cnn</span><span class="p">,</span> <span class="n">ds</span><span class="o">.</span><span class="n">test_data</span><span class="p">,</span> <span class="n">ds</span><span class="o">.</span><span class="n">test_labels</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../../_images/Classifying_TESS_flares_with_CNNs_23_0.png" src="../../_images/Classifying_TESS_flares_with_CNNs_23_0.png" />
 </div>
 </div>
 </div>
-<div class="section" id="faqs">
-<h2>FAQs<a class="headerlink" href="#faqs" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="faq">
+<h2>FAQ<a class="headerlink" href="#faq" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p><strong>The results don’t look great… why?</strong> From the confusion matrix in Section 6, when faced with the test dataset (i.e., data not used for training or validation), the model predicts a large fraction of false positive flare events, and consequently not enough true negative flare events). The published models from <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2020JOSS....5.2347F/abstract">Feinstein et al. 2020</a> perform <em>much better</em>, and the confusion matrix <strong>should look more like the results shown below</strong>. We note that in this notebook we are using a subset of the available training data and training for only a subset of the optimal number of epochs for space and time considerations, but you are welcome to agument these restricitons, and as always check out <a class="reference external" href="https://adina.feinste.in/stella/">the <code class="docutils literal notranslate"><span class="pre">stella</span></code> repository</a> for more information!</p></li>
+<li><p><strong>The results don’t look great… why?</strong> From the confusion matrix in Section 6, when faced with the test dataset (i.e., data not used for training or validation), the model predicts a large fraction of false positive flare events, and consequently not enough true negative flare events).
+The published models from <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2020JOSS....5.2347F/abstract">Feinstein et al. 2020</a> perform <em>much better</em>, and the confusion matrix <strong>should look more like the results shown below</strong>.
+We note that in this notebook we are using a subset of the available training data, and we are training the model for only a subset of the optimal number of epochs for space and time considerations, but you are welcome to augment these restrictions, and as always check out <a class="reference external" href="https://adina.feinste.in/stella/">the <code class="docutils literal notranslate"><span class="pre">stella</span></code> repository</a> for more information!</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -873,22 +1050,44 @@ WARNING: UnitsWarning: Unit &#39;Rsun&#39; not supported by the VOUnit standard.
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../../_images/Classifying_TESS_flares_with_CNNs_25_0.png" src="../../_images/Classifying_TESS_flares_with_CNNs_25_0.png" />
+</div>
 </div>
 <ul class="simple">
-<li><p><strong>Can I improve the model by changing it?</strong> We only trained for 20 epochs, which is many fewer than the published model. Go back to Section 4 (“Train the CNN to perform a classification task”) and increase the number of epochs to 100 (or more!) and train again. Does your model perform better? Your results may look better/worse/different from the published results due to the stochastic nature of training.</p></li>
-<li><p><strong>Can I try a different model?  I think the results could be improved.</strong> Yes!  You can try adding layers, swapping out the max pooling, changing the activation functions, swapping out the loss function, or trying a different optimizer or learning rate.  Experiment and see what model changes give the best results. You should be aware:  when you start training again, you pick up where your model left off.  If you want to “reset” your model to epoch 0 and random weights, you should run the cells to make and compile the model again.</p></li>
-<li><p><strong>I want to test my model on my training data!</strong> No. You will convince yourself that your results are much better than they actually are.  Always keep your training, validation, and testing sets completely separate!</p></li>
+<li><p><strong>Can I improve the model by increasing the number of epochs its training for?</strong>
+We only trained for 20 epochs, which is many fewer than the published model.
+Go back to Section 4 (“Train the CNN to perform a classification task”) and increase the number of epochs to 100 (or more!) and train again.
+Does your model perform better?
+Your results may look better/worse/different from the published results due to the stochastic nature of training.</p></li>
+<li><p><strong>Can I try a different model?  I think the results could be improved.</strong>
+Yes! You can try adding layers, swapping out the max pooling, changing the activation functions, swapping out the loss function, or trying a different optimizer or learning rate.
+Experiment and see what model changes give the best results.
+You should be aware: when you start training again, you pick up where your model left off.
+If you want to “reset” your model to epoch 0 and random weights, you should run the cells to make and compile the model again.</p></li>
+<li><p><strong>I want to test my model on my training data!</strong>
+No.
+You will convince yourself that your results are much better than they actually are.
+Always keep your training, validation, and testing sets completely separate!</p></li>
 </ul>
 </div>
 <div class="section" id="extensions-exercises">
 <h2>Extensions/Exercises<a class="headerlink" href="#extensions-exercises" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p><strong>Is the model “overfitting”?</strong> Using the results of the model’s <code class="docutils literal notranslate"><span class="pre">history</span></code> (saved as a result of the model training process), investigate the behavior of the training and validation losses and accuracies as a function of training epoch. Make a plot or two! How do the training and validation losses compare? How do the training and validation accuracies compare? If he loss for the validation set is higher than for the training set (and conversely, the accuracy for the validation set is lower than for the training set), the model may be suffering from <a class="reference external" href="https://www.tensorflow.org/tutorials/keras/overfit_and_underfit">overfitting</a>.</p></li>
-<li><p><strong>Try applying this model to a new dataset</strong> Using the built-in functionality provided by the <code class="docutils literal notranslate"><span class="pre">stella</span></code> package, you can pre-process your own 2-minute cadence TESS light curves and predict flares. An example workflow is shown below:</p></li>
+<li><p><strong>Is the model “overfitting”?</strong>
+Using the results of the model’s <code class="docutils literal notranslate"><span class="pre">history</span></code> (saved as a result of the model training process), investigate the behavior of the training and validation losses and accuracies as a function of training epoch.
+Make a plot or two!
+How do the training and validation losses compare?
+How do the training and validation accuracies compare?
+If the loss for the validation set is higher than for the training set (and conversely, the accuracy for the validation set is lower than for the training set), the model may be suffering from <a class="reference external" href="https://www.tensorflow.org/tutorials/keras/overfit_and_underfit">overfitting</a>.</p></li>
+<li><p><strong>Try applying this model to a new dataset</strong>
+Using the built-in functionality provided by the <code class="docutils literal notranslate"><span class="pre">stella</span></code> package, you can pre-process your own 2-minute cadence TESS light curves and predict flares.
+An example workflow is shown below:</p></li>
 </ul>
 <div class="section" id="predict-flares-in-a-new-dataset">
 <h3>7. Predict flares in a new dataset<a class="headerlink" href="#predict-flares-in-a-new-dataset" title="Permalink to this headline">¶</a></h3>
-<p>In this step, we will download light curves directly from TESS, pre-process them with <code class="docutils literal notranslate"><span class="pre">stella</span></code> for input to the CNN, and predict flares. The sample is a set of bright M dwarfs not featured in the training/validation/tests datasets.</p>
+<p>In this step, we will download light curves directly from TESS, pre-process them with <code class="docutils literal notranslate"><span class="pre">stella</span></code> for input to the CNN, and predict flares.
+The sample is a set of bright M dwarfs not featured in the training/validation/tests datasets.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ticids</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;120461526&#39;</span><span class="p">,</span> <span class="s1">&#39;278779899&#39;</span><span class="p">,</span> <span class="s1">&#39;139754153&#39;</span><span class="p">,</span> <span class="s1">&#39;273418879&#39;</span><span class="p">,</span> <span class="s1">&#39;52121469&#39;</span><span class="p">,</span> <span class="s1">&#39;188580272&#39;</span><span class="p">,</span> <span class="s1">&#39;394015919&#39;</span><span class="p">,</span> <span class="s1">&#39;183564259&#39;</span><span class="p">,</span> <span class="s1">&#39;402104884&#39;</span><span class="p">]</span>
@@ -901,7 +1100,7 @@ WARNING: UnitsWarning: Unit &#39;Rsun&#39; not supported by the VOUnit standard.
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># for all the selected targets, pull the available lightcurves using the lightkurve package</span>
 <span class="n">lcs</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">ticids</span><span class="p">:</span>
-    <span class="n">lc</span> <span class="o">=</span> <span class="n">search_lightcurve</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="s1">&#39;TIC&#39;</span><span class="o">+</span><span class="n">name</span><span class="p">,</span> <span class="n">mission</span><span class="o">=</span><span class="s1">&#39;TESS&#39;</span><span class="p">,</span> <span class="n">sector</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+    <span class="n">lc</span> <span class="o">=</span> <span class="n">search_lightcurve</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="s1">&#39;TIC&#39;</span><span class="o">+</span><span class="n">name</span><span class="p">,</span> <span class="n">mission</span><span class="o">=</span><span class="s1">&#39;TESS&#39;</span><span class="p">,</span> <span class="n">sector</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
     <span class="n">lc</span> <span class="o">=</span> <span class="n">lc</span><span class="o">.</span><span class="n">download_all</span><span class="p">()</span>
     <span class="n">lcs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lc</span><span class="p">)</span>
 </pre></div>
@@ -911,14 +1110,14 @@ WARNING: UnitsWarning: Unit &#39;Rsun&#39; not supported by the VOUnit standard.
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load the CNN using `stella`</span>
-<span class="n">cnn</span> <span class="o">=</span> <span class="n">stella</span><span class="o">.</span><span class="n">ConvNN</span><span class="p">(</span><span class="n">output_dir</span><span class="o">=</span><span class="n">data_dir</span><span class="p">,</span><span class="n">ds</span><span class="o">=</span><span class="n">ds</span><span class="p">)</span>
+<span class="n">cnn_stella</span> <span class="o">=</span> <span class="n">stella</span><span class="o">.</span><span class="n">ConvNN</span><span class="p">(</span><span class="n">output_dir</span><span class="o">=</span><span class="n">data_dir</span><span class="p">,</span> <span class="n">ds</span><span class="o">=</span><span class="n">ds</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span><span class="mi">12</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>
 
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">lc</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">lcs</span><span class="p">):</span>
     <span class="c1"># pull out on the first light curve in each set, if more than one exist</span>
@@ -926,26 +1125,59 @@ WARNING: UnitsWarning: Unit &#39;Rsun&#39; not supported by the VOUnit standard.
         
     <span class="c1"># predict the flare probability light cuvey for the input data using `stella` </span>
     <span class="c1"># (which applies the necessary pre-processing to the data for input to the CNN)</span>
-    <span class="n">cnn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">model_file</span><span class="p">,</span> <span class="n">times</span><span class="o">=</span><span class="n">lc</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">fluxes</span><span class="o">=</span><span class="n">lc</span><span class="o">.</span><span class="n">flux</span><span class="p">,</span> <span class="n">errs</span><span class="o">=</span><span class="n">lc</span><span class="o">.</span><span class="n">flux_err</span><span class="p">)</span>
+    <span class="n">cnn_stella</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">cnn_file</span><span class="p">,</span> <span class="n">times</span><span class="o">=</span><span class="n">lc</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">fluxes</span><span class="o">=</span><span class="n">lc</span><span class="o">.</span><span class="n">flux</span><span class="p">,</span> <span class="n">errs</span><span class="o">=</span><span class="n">lc</span><span class="o">.</span><span class="n">flux_err</span><span class="p">)</span>
     
     <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-    <span class="n">im</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">cnn</span><span class="o">.</span><span class="n">predict_time</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">cnn</span><span class="o">.</span><span class="n">predict_flux</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">cnn</span><span class="o">.</span><span class="n">predictions</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="c1">#, vmin=0, vmax=1)</span>
+    <span class="n">im</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">cnn_stella</span><span class="o">.</span><span class="n">predict_time</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">cnn_stella</span><span class="o">.</span><span class="n">predict_flux</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">cnn_stella</span><span class="o">.</span><span class="n">predictions</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mf">1.</span> <span class="p">)</span>
     
     <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Probability of Flare&#39;</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Time [BJD-2457000]&#39;</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Normalized Flux&#39;</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;TIC </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">lc</span><span class="o">.</span><span class="n">targetid</span><span class="p">));</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|█████████████████████████████████████████████| 1/1 [00:05&lt;00:00,  5.42s/it]
+100%|█████████████████████████████████████████████| 1/1 [00:05&lt;00:00,  5.20s/it]
+100%|█████████████████████████████████████████████| 1/1 [00:04&lt;00:00,  4.97s/it]
+100%|█████████████████████████████████████████████| 1/1 [00:05&lt;00:00,  5.97s/it]
+100%|█████████████████████████████████████████████| 1/1 [00:06&lt;00:00,  6.75s/it]
+100%|█████████████████████████████████████████████| 1/1 [00:07&lt;00:00,  7.07s/it]
+100%|█████████████████████████████████████████████| 1/1 [00:07&lt;00:00,  7.32s/it]
+100%|█████████████████████████████████████████████| 1/1 [00:00&lt;00:00,  2.03it/s]
+100%|█████████████████████████████████████████████| 1/1 [00:07&lt;00:00,  7.26s/it]
+</pre></div>
+</div>
+<img alt="../../_images/Classifying_TESS_flares_with_CNNs_32_1.png" src="../../_images/Classifying_TESS_flares_with_CNNs_32_1.png" />
 </div>
 </div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>FAQ<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Why does the data near gaps have a high probability of being flares?</strong>
+This isn’t necessarily the case.
+The issue here is that <code class="docutils literal notranslate"><span class="pre">stella</span></code> needs 100 data points on either side of a given cadence to create an “example” (those 200 cadence samples we trained on).
+When there’s a gap in the data, the first 100 points can’t be centered in each example properly.
+As such, <code class="docutils literal notranslate"><span class="pre">stella</span></code> cannot accurately predict flares in these data and skips it.</p></li>
+<li><p><strong>But what if there are flares near the data gaps?</strong>
+There may very well be flares towards the data gaps!
+Unfortunately, <code class="docutils literal notranslate"><span class="pre">stella</span></code> cannot find those for you at present, and you’ll need to identify those yourself.</p></li>
+</ul>
 </div>
 <div class="section" id="about-this-notebook">
 <h2>About this Notebook<a class="headerlink" href="#about-this-notebook" title="Permalink to this headline">¶</a></h2>
-<p><strong>Author:</strong> Claire Murray, Data Scientist, <a class="reference external" href="mailto:cmurray1&#37;&#52;&#48;stsci&#46;edu">cmurray1<span>&#64;</span>stsci<span>&#46;</span>edu</a> based on the <a href="https://ui.adsabs.harvard.edu/abs/2020JOSS....5.2347F/abstract"> <code class="docutils literal notranslate"><span class="pre">stella</span></code>&lt;\a&gt; software package for the CNN used in <a href="https://ui.adsabs.harvard.edu/abs/2020AJ....160..219F/abstract">”Flare Statistics for Young Stars from a Convolutional Neural Network Analysis of TESS Data”</a>, Adina D. Feinstein et al. Astronomical Journal, Volume 160, Issue 5, November 2020, and the notebook “CNN_for_cluster_masses” by Michelle Ntampaka, Data Scientist, <a class="reference external" href="mailto:mntampaka&#37;&#52;&#48;stsci&#46;edu">mntampaka<span>&#64;</span>stsci<span>&#46;</span>edu</a>.</p>
-<p><strong>Updated On:</strong> 2022-3-10</p>
+<p><strong>Author:</strong><br />
+Claire Murray, Data Scientist, <a class="reference external" href="mailto:cmurray1&#37;&#52;&#48;stsci&#46;edu">cmurray1<span>&#64;</span>stsci<span>&#46;</span>edu</a></p>
+<p><strong>Additional Contributors:</strong><br />
+Yotam Cohen, STScI Staff Scientist, <a class="reference external" href="mailto:ycohen&#37;&#52;&#48;stsci&#46;edu">ycohen<span>&#64;</span>stsci<span>&#46;</span>edu</a></p>
+<p><strong>Info:</strong><br />
+This notebook is based on the <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2020JOSS....5.2347F/abstract"><code class="docutils literal notranslate"><span class="pre">stella</span></code></a> software package for the CNN used in <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2020AJ....160..219F/abstract">“Flare Statistics for Young Stars from a Convolutional Neural Network Analysis of TESS Data”</a>, Adina D. Feinstein et al. Astronomical Journal, Volume 160, Issue 5, November 2020, and the notebook “CNN_for_cluster_masses” by Michelle Ntampaka, Data Scientist, <a class="reference external" href="mailto:mntampaka&#37;&#52;&#48;stsci&#46;edu">mntampaka<span>&#64;</span>stsci<span>&#46;</span>edu</a>.</p>
+<p><strong>Updated On:</strong> 2022-5-25</p>
 </div>
 <div class="section" id="citations">
 <h2>Citations<a class="headerlink" href="#citations" title="Permalink to this headline">¶</a></h2>
@@ -953,7 +1185,7 @@ WARNING: UnitsWarning: Unit &#39;Rsun&#39; not supported by the VOUnit standard.
 authors. Follow these links for more information:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2020AJ....160..219F/abstract">Citing the CNN</a></p></li>
-<li><p><a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2020JOSS....5.2347F/abstract">Citing the <code class="docutils literal notranslate"><span class="pre">stella</span></code></a></p></li>
+<li><p><a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2020JOSS....5.2347F/abstract">Citing <code class="docutils literal notranslate"><span class="pre">stella</span></code></a></p></li>
 <li><p><a class="reference external" href="https://www.astropy.org/acknowledging.html">Citing <code class="docutils literal notranslate"><span class="pre">astropy</span></code></a></p></li>
 <li><p><a class="reference external" href="https://keras.io/getting_started/faq/#how-should-i-cite-keras">Citing <code class="docutils literal notranslate"><span class="pre">keras</span></code></a></p></li>
 </ul>
@@ -986,14 +1218,7 @@ authors. Follow these links for more information:</p>
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../../intro.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">STScI Notebook Repository Template</p>
-        </div>
-    </a>
+<div class='prev-next-area'>
 </div>
             
         </div>
