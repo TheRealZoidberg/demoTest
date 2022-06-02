@@ -1006,7 +1006,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MSE = 0.2395
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MSE = 0.2366
 </pre></div>
 </div>
 <img alt="../../_images/Regressing_3D-HST_galaxy_redshift_with_decision_trees_36_1.png" src="../../_images/Regressing_3D-HST_galaxy_redshift_with_decision_trees_36_1.png" />
@@ -1060,7 +1060,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;min_samples_split&#39;: 85, &#39;min_samples_leaf&#39;: 45, &#39;max_depth&#39;: 11}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;min_samples_split&#39;: 15, &#39;min_samples_leaf&#39;: 45, &#39;max_depth&#39;: 19}
 </pre></div>
 </div>
 </div>
@@ -1132,7 +1132,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MSE = 0.1153
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MSE = 0.1178
 </pre></div>
 </div>
 <img alt="../../_images/Regressing_3D-HST_galaxy_redshift_with_decision_trees_46_1.png" src="../../_images/Regressing_3D-HST_galaxy_redshift_with_decision_trees_46_1.png" />
@@ -1178,150 +1178,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="nn">Input In [25],</span> in <span class="ni">&lt;cell line: 5&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="s2">&quot;min_samples_split&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="s2">&quot;min_samples_leaf&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span>     <span class="s2">&quot;max_depth&quot;</span><span class="p">:</span> <span class="n">depth</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="p">}</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="n">rff</span> <span class="o">=</span> <span class="n">RandomForestRegressor</span><span class="p">(</span><span class="o">**</span><span class="n">params</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">13</span> <span class="n">rff</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="n">y_predict_train</span> <span class="o">=</span> <span class="n">rff</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="n">y_predict_test</span> <span class="o">=</span> <span class="n">rff</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
-
-<span class="nn">File /usr/share/miniconda/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:476,</span> in <span class="ni">BaseForest.fit</span><span class="nt">(self, X, y, sample_weight)</span>
-<span class="g g-Whitespace">    </span><span class="mi">465</span> <span class="n">trees</span> <span class="o">=</span> <span class="p">[</span>
-<span class="g g-Whitespace">    </span><span class="mi">466</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_make_estimator</span><span class="p">(</span><span class="n">append</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">random_state</span><span class="p">)</span>
-<span class="nn">    467     for i</span> in <span class="ni">range</span><span class="nt">(n_more_estimators)</span>
-<span class="g g-Whitespace">    </span><span class="mi">468</span> <span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">470</span> <span class="c1"># Parallel loop: we prefer the threading backend as the Cython code</span>
-<span class="g g-Whitespace">    </span><span class="mi">471</span> <span class="c1"># for fitting the trees is internally releasing the Python GIL</span>
-<span class="g g-Whitespace">    </span><span class="mi">472</span> <span class="c1"># making threading more efficient than multiprocessing in</span>
-<span class="g g-Whitespace">    </span><span class="mi">473</span> <span class="c1"># that case. However, for joblib 0.12+ we respect any</span>
-<span class="g g-Whitespace">    </span><span class="mi">474</span> <span class="c1"># parallel_backend contexts set at a higher level,</span>
-<span class="g g-Whitespace">    </span><span class="mi">475</span> <span class="c1"># since correctness does not rely on using threads.</span>
-<span class="ne">--&gt; </span><span class="mi">476</span> <span class="n">trees</span> <span class="o">=</span> <span class="n">Parallel</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">477</span>     <span class="n">n_jobs</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">n_jobs</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">478</span>     <span class="n">verbose</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">479</span>     <span class="n">prefer</span><span class="o">=</span><span class="s2">&quot;threads&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">480</span> <span class="p">)(</span>
-<span class="g g-Whitespace">    </span><span class="mi">481</span>     <span class="n">delayed</span><span class="p">(</span><span class="n">_parallel_build_trees</span><span class="p">)(</span>
-<span class="g g-Whitespace">    </span><span class="mi">482</span>         <span class="n">t</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">483</span>         <span class="bp">self</span><span class="o">.</span><span class="n">bootstrap</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">484</span>         <span class="n">X</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">485</span>         <span class="n">y</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">486</span>         <span class="n">sample_weight</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">487</span>         <span class="n">i</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">488</span>         <span class="nb">len</span><span class="p">(</span><span class="n">trees</span><span class="p">),</span>
-<span class="g g-Whitespace">    </span><span class="mi">489</span>         <span class="n">verbose</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">490</span>         <span class="n">class_weight</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">class_weight</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">491</span>         <span class="n">n_samples_bootstrap</span><span class="o">=</span><span class="n">n_samples_bootstrap</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">492</span>     <span class="p">)</span>
-<span class="nn">    493     for i, t</span> in <span class="ni">enumerate</span><span class="nt">(trees)</span>
-<span class="g g-Whitespace">    </span><span class="mi">494</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">496</span> <span class="c1"># Collect newly grown trees</span>
-<span class="g g-Whitespace">    </span><span class="mi">497</span> <span class="bp">self</span><span class="o">.</span><span class="n">estimators_</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">trees</span><span class="p">)</span>
-
-<span class="nn">File /usr/share/miniconda/lib/python3.9/site-packages/joblib/parallel.py:1046,</span> in <span class="ni">Parallel.__call__</span><span class="nt">(self, iterable)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1043</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dispatch_one_batch</span><span class="p">(</span><span class="n">iterator</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1044</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_iterating</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_original_iterator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
-<span class="ne">-&gt; </span><span class="mi">1046</span> <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">dispatch_one_batch</span><span class="p">(</span><span class="n">iterator</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1047</span>     <span class="k">pass</span>
-<span class="g g-Whitespace">   </span><span class="mi">1049</span> <span class="k">if</span> <span class="n">pre_dispatch</span> <span class="o">==</span> <span class="s2">&quot;all&quot;</span> <span class="ow">or</span> <span class="n">n_jobs</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1050</span>     <span class="c1"># The iterable was consumed all at once by the above for loop.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1051</span>     <span class="c1"># No need to wait for async callbacks to trigger to</span>
-<span class="g g-Whitespace">   </span><span class="mi">1052</span>     <span class="c1"># consumption.</span>
-
-<span class="nn">File /usr/share/miniconda/lib/python3.9/site-packages/joblib/parallel.py:861,</span> in <span class="ni">Parallel.dispatch_one_batch</span><span class="nt">(self, iterator)</span>
-<span class="g g-Whitespace">    </span><span class="mi">859</span>     <span class="k">return</span> <span class="kc">False</span>
-<span class="g g-Whitespace">    </span><span class="mi">860</span> <span class="k">else</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">861</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_dispatch</span><span class="p">(</span><span class="n">tasks</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">862</span>     <span class="k">return</span> <span class="kc">True</span>
-
-<span class="nn">File /usr/share/miniconda/lib/python3.9/site-packages/joblib/parallel.py:779,</span> in <span class="ni">Parallel._dispatch</span><span class="nt">(self, batch)</span>
-<span class="g g-Whitespace">    </span><span class="mi">777</span> <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">778</span>     <span class="n">job_idx</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_jobs</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">779</span>     <span class="n">job</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_backend</span><span class="o">.</span><span class="n">apply_async</span><span class="p">(</span><span class="n">batch</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="n">cb</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">780</span>     <span class="c1"># A job can complete so quickly than its callback is</span>
-<span class="g g-Whitespace">    </span><span class="mi">781</span>     <span class="c1"># called before we get here, causing self._jobs to</span>
-<span class="g g-Whitespace">    </span><span class="mi">782</span>     <span class="c1"># grow. To ensure correct results ordering, .insert is</span>
-<span class="g g-Whitespace">    </span><span class="mi">783</span>     <span class="c1"># used (rather than .append) in the following line</span>
-<span class="g g-Whitespace">    </span><span class="mi">784</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_jobs</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">job_idx</span><span class="p">,</span> <span class="n">job</span><span class="p">)</span>
-
-<span class="nn">File /usr/share/miniconda/lib/python3.9/site-packages/joblib/_parallel_backends.py:208,</span> in <span class="ni">SequentialBackend.apply_async</span><span class="nt">(self, func, callback)</span>
-<span class="g g-Whitespace">    </span><span class="mi">206</span> <span class="k">def</span> <span class="nf">apply_async</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">207</span>     <span class="sd">&quot;&quot;&quot;Schedule a func to be run&quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">208</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">ImmediateResult</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">209</span>     <span class="k">if</span> <span class="n">callback</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">210</span>         <span class="n">callback</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-
-<span class="nn">File /usr/share/miniconda/lib/python3.9/site-packages/joblib/_parallel_backends.py:572,</span> in <span class="ni">ImmediateResult.__init__</span><span class="nt">(self, batch)</span>
-<span class="g g-Whitespace">    </span><span class="mi">569</span> <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">batch</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">570</span>     <span class="c1"># Don&#39;t delay the application, to avoid keeping the input</span>
-<span class="g g-Whitespace">    </span><span class="mi">571</span>     <span class="c1"># arguments in memory</span>
-<span class="ne">--&gt; </span><span class="mi">572</span>     <span class="bp">self</span><span class="o">.</span><span class="n">results</span> <span class="o">=</span> <span class="n">batch</span><span class="p">()</span>
-
-<span class="nn">File /usr/share/miniconda/lib/python3.9/site-packages/joblib/parallel.py:262,</span> in <span class="ni">BatchedCalls.__call__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">258</span> <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">259</span>     <span class="c1"># Set the default nested backend to self._backend but do not set the</span>
-<span class="g g-Whitespace">    </span><span class="mi">260</span>     <span class="c1"># change the default number of processes to -1</span>
-<span class="g g-Whitespace">    </span><span class="mi">261</span>     <span class="k">with</span> <span class="n">parallel_backend</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_backend</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_n_jobs</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">262</span>         <span class="k">return</span> <span class="p">[</span><span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">263</span>                 <span class="k">for</span> <span class="n">func</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">kwargs</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">]</span>
-
-<span class="nn">File /usr/share/miniconda/lib/python3.9/site-packages/joblib/parallel.py:262,</span> in <span class="ni">&lt;listcomp&gt;</span><span class="nt">(.0)</span>
-<span class="g g-Whitespace">    </span><span class="mi">258</span> <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">259</span>     <span class="c1"># Set the default nested backend to self._backend but do not set the</span>
-<span class="g g-Whitespace">    </span><span class="mi">260</span>     <span class="c1"># change the default number of processes to -1</span>
-<span class="g g-Whitespace">    </span><span class="mi">261</span>     <span class="k">with</span> <span class="n">parallel_backend</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_backend</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_n_jobs</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">262</span>         <span class="k">return</span> <span class="p">[</span><span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">263</span>                 <span class="k">for</span> <span class="n">func</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">kwargs</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">]</span>
-
-<span class="nn">File /usr/share/miniconda/lib/python3.9/site-packages/sklearn/utils/fixes.py:117,</span> in <span class="ni">_FuncWrapper.__call__</span><span class="nt">(self, *args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">115</span> <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">116</span>     <span class="k">with</span> <span class="n">config_context</span><span class="p">(</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">117</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">function</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File /usr/share/miniconda/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:189,</span> in <span class="ni">_parallel_build_trees</span><span class="nt">(tree, bootstrap, X, y, sample_weight, tree_idx, n_trees, verbose, class_weight, n_samples_bootstrap)</span>
-<span class="g g-Whitespace">    </span><span class="mi">186</span>     <span class="k">elif</span> <span class="n">class_weight</span> <span class="o">==</span> <span class="s2">&quot;balanced_subsample&quot;</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">187</span>         <span class="n">curr_sample_weight</span> <span class="o">*=</span> <span class="n">compute_sample_weight</span><span class="p">(</span><span class="s2">&quot;balanced&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">indices</span><span class="o">=</span><span class="n">indices</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">189</span>     <span class="n">tree</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sample_weight</span><span class="o">=</span><span class="n">curr_sample_weight</span><span class="p">,</span> <span class="n">check_input</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">190</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">191</span>     <span class="n">tree</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sample_weight</span><span class="o">=</span><span class="n">sample_weight</span><span class="p">,</span> <span class="n">check_input</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-
-<span class="nn">File /usr/share/miniconda/lib/python3.9/site-packages/sklearn/tree/_classes.py:1342,</span> in <span class="ni">DecisionTreeRegressor.fit</span><span class="nt">(self, X, y, sample_weight, check_input)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1313</span> <span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sample_weight</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">check_input</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1314</span>     <span class="sd">&quot;&quot;&quot;Build a decision tree regressor from the training set (X, y).</span>
-<span class="g g-Whitespace">   </span><span class="mi">1315</span><span class="sd"> </span>
-<span class="g g-Whitespace">   </span><span class="mi">1316</span><span class="sd">     Parameters</span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1339</span><span class="sd">         Fitted estimator.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1340</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1342</span>     <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1343</span>         <span class="n">X</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1344</span>         <span class="n">y</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1345</span>         <span class="n">sample_weight</span><span class="o">=</span><span class="n">sample_weight</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1346</span>         <span class="n">check_input</span><span class="o">=</span><span class="n">check_input</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1347</span>     <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1348</span>     <span class="k">return</span> <span class="bp">self</span>
-
-<span class="nn">File /usr/share/miniconda/lib/python3.9/site-packages/sklearn/tree/_classes.py:458,</span> in <span class="ni">BaseDecisionTree.fit</span><span class="nt">(self, X, y, sample_weight, check_input)</span>
-<span class="g g-Whitespace">    </span><span class="mi">447</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">448</span>     <span class="n">builder</span> <span class="o">=</span> <span class="n">BestFirstTreeBuilder</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">449</span>         <span class="n">splitter</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">450</span>         <span class="n">min_samples_split</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">455</span>         <span class="bp">self</span><span class="o">.</span><span class="n">min_impurity_decrease</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">456</span>     <span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">458</span> <span class="n">builder</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tree_</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sample_weight</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">460</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_outputs_</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">is_classifier</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">461</span>     <span class="bp">self</span><span class="o">.</span><span class="n">n_classes_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_classes_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
-</pre></div>
-</div>
+<img alt="../../_images/Regressing_3D-HST_galaxy_redshift_with_decision_trees_49_0.png" src="../../_images/Regressing_3D-HST_galaxy_redshift_with_decision_trees_49_0.png" />
 </div>
 </div>
 <p>Beyond a max_depth of ~10, the MSE on the training set declines while the MSE on the test set flattens out, suggesting some amount of over-fitting.</p>
@@ -1337,6 +1194,11 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Cross-validated score: </span><span class="si">{</span><span class="n">cv</span><span class="p">[</span><span class="s2">&quot;test_score&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1"> +/- </span><span class="si">{</span><span class="n">cv</span><span class="p">[</span><span class="s2">&quot;test_score&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cross-validated score: -0.146 +/- 0.057
 </pre></div>
 </div>
 </div>
@@ -1358,6 +1220,9 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/Regressing_3D-HST_galaxy_redshift_with_decision_trees_54_0.png" src="../../_images/Regressing_3D-HST_galaxy_redshift_with_decision_trees_54_0.png" />
 </div>
 </div>
 <p>The most “important” features in this model are the F125W and F606W fluxes. Parameters such as id, ra, dec, x, and y understandably have very little influence on the predictions.</p>
@@ -1391,12 +1256,21 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../../_images/Regressing_3D-HST_galaxy_redshift_with_decision_trees_57_0.png" src="../../_images/Regressing_3D-HST_galaxy_redshift_with_decision_trees_57_0.png" />
+</div>
 </div>
 <p>Comparing the MSE for the results above:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Random forest MSE = </span><span class="si">{</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_validate</span><span class="p">,</span> <span class="n">y_predict_validate</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Skelton et al. (2014) MSE = </span><span class="si">{</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_validate</span><span class="p">,</span> <span class="n">y_skelton2014</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Random forest MSE = 0.1392
+Skelton et al. (2014) MSE = 0.0928
 </pre></div>
 </div>
 </div>
