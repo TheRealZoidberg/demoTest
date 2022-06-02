@@ -4,5 +4,7 @@
 format: jb-book
 root: intro
 chapters:
-- file: notebooks/hello-universe/CNN_for_Classifying_TESS_Flares.ipynb
-- file: notebooks/hello-universe/CNN_for_Classifying_Galaxy_Mergers.ipynb
+- file: notebooks/hello-universe/Classifying_TESS_flares_with_CNNs.ipynb
+- file: notebooks/hello-universe/Classifying_JWST-HST_galaxy_mergers_with_CNNs.ipynb
+- file: notebooks/hello-universe/Regressing_3D-HST_galaxy_redshift_with_decision_trees.ipynb
+- file: notebooks/hello-universe/Classifying_PanSTARRS_sources_with_unsupervised_learning.ipynb
