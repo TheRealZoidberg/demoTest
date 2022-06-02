@@ -32,8 +32,8 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-%%time
-idx = np.random.choice(sample.shape[0], 10000)
-tsne_sample = TSNE(n_components=2, init='pca', perplexity=10, learning_rate = 10).fit_transform(sample[idx])
+['max_depths = np.arange(1, 20, 2).astype(int)', '', 'train_mse = []', 'test_mse = []', 'for depth in max_depths:']
+...
+["ax.set_xlabel('max depth')", "ax.set_ylabel('MSE')", 'ax.legend()', '', 'plt.show()']
 -------------------
 
