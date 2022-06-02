@@ -12,3 +12,5 @@ numpy==1.22.3
 sklearn==0.0
 git+https://github.com/afeinstein20/stella.git
 tensorflow==2.8.0
+protobuf~=3.19.0
+
